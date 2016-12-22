@@ -8,7 +8,7 @@
 %   See the AIP README file for restrictions and more information.
 %
 % TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
-% as well as the rest of the prerequisites for REVTeX 4.1
+% as well as the rest of the prerequisites for REVTeX 4.
 %
 % It also requires running BibTeX. The commands are as follows:
 %
@@ -38,577 +38,286 @@ rsi,%
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 
+%\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{cleveref}
+
 \begin{document}
 
 \preprint{AIP/123-QED}
 
-\title[Sample title]{Sample Title:\\with Forced Linebreak\footnote{Error!}}% Force line breaks with \\
-\thanks{Footnote to title of article.}
+\title[Sample title]{Evidence of terbium and oxygen co-segregation in annealed AlN:Tb}% Force line breaks with \\
+%\thanks{Footnote to title of article.}
 
-\author{A. Author}
- \altaffiliation[Also at ]{Physics Department, XYZ University.}%Lines break automatically or can be forced with \\
-\author{B. Author}%
- \email{Second.Author@institution.edu.}
-\affiliation{ 
-Authors' institution and/or address%\\This line break forced with \textbackslash\textbackslash
-}%
+\author{V.C. Angadi}
+\email{vcangadi1@sheffield.ac.uk}
 
-\author{C. Author}
- \homepage{http://www.Second.institution.edu/~Charlie.Author.}
-\affiliation{%
-Second institution and/or address%\\This line break forced% with \\
-}%
+\author{T. Walther}%
+\email{t.walther@sheffield.ac.uk}
+
+\affiliation{Dept. Electronic \& Electrical Eng., Kroto Centre for High-Resolution Imaging and Spectroscopy, University of Sheffield, North Campus, Wheeldon Street, Sheffield S3 7HQ, UK}
+
+\author{F. Benz}
+\affiliation{NanoPhotonics Centre, Cavendish Laboratory, Department of Physics, University of Cambridge, JJ Thomson Ave, Cambridge, CB3 0HE, United Kingdom}
+
+\author{T. Aoki}
+\affiliation{LeRoy Eyring Center for Solid State Science, Arizona State University, Tempe, AZ 85287, USA}
 
 \date{\today}% It is always \today, today,
              %  but any date may be explicitly specified
 
 \begin{abstract}
-An article usually includes an abstract, a concise summary of the work
-covered at length in the main body of the article. It is used for
-secondary publications and for information retrieval purposes. 
-%
-Valid PACS numbers may be entered using the \verb+\pacs{#1}+ command.
+Analytical scanning transmission electron microscopy has been applied to study aluminium nitride (AlN) doped with terbium (Tb) and annealed at $800^\circ$C. Correlation of the maps of terbium and oxygen (O) from electron energy-loss spectrum image proves that these two elements co-segregate, replacing aluminium (Al) and nitrogen (N) atoms respectively. This agrees well with modelling which predicted the existence of Tb$-$O complexes to successfully fit the rather complicated cathodoluminescence emission spectra of the sample.
+
+%Valid PACS numbers may be entered using the \verb+\pacs{#1}+ command.
 \end{abstract}
 
 \pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
                              % Classification Scheme.
-\keywords{Suggested keywords}%Use showkeys class option if keyword
+\keywords{aluminium nitride, terbium, segregation, luminescence, electron microscopy}
+%Use showkeys class option if keyword
                               %display desired
 \maketitle
 
-\begin{quotation}
-The ``lead paragraph'' is encapsulated with the \LaTeX\ 
-\verb+quotation+ environment and is formatted as a single paragraph before the first section heading. 
-(The \verb+quotation+ environment reverts to its usual meaning after the first sectioning command.) 
-Note that numbered references are allowed in the lead paragraph.
-%
-The lead paragraph will only be found in an article being prepared for the journal \textit{Chaos}.
-\end{quotation}
+\section{Introduction:}
+\label{sec:Intro}
+(general info on Tb emission spectra, luminescence, AlN, modelling, need for analytical STEM.)
 
-\section{\label{sec:level1}First-level heading:\protect\\ The line
-break was forced \lowercase{via} \textbackslash\textbackslash}
+\section{Experimental Details}
+\label{sec:exp_detail}
 
-This sample document demonstrates proper use of REV\TeX~4.1 (and
-\LaTeXe) in manuscripts prepared for submission to AIP
-journals. Further information can be found in the documentation included in the distribution or available at
-\url{http://authors.aip.org} and in the documentation for 
-REV\TeX~4.1 itself.
+\subsection{Growth + Anneal details}
+\label{sec:growth}
+(from Felix's thesis)
 
-When commands are referred to in this example file, they are always
-shown with their required arguments, using normal \TeX{} format. In
-this format, \verb+#1+, \verb+#2+, etc. stand for required
-author-supplied arguments to commands. For example, in
-\verb+\section{#1}+ the \verb+#1+ stands for the title text of the
-author's section heading, and in \verb+\title{#1}+ the \verb+#1+
-stands for the title text of the paper.
+\subsection{Cathodoluminescence details}
+\label{sec:CL}
+(from thesis)
 
-Line breaks in section headings at all levels can be introduced using
-\textbackslash\textbackslash. A blank input line tells \TeX\ that the
-paragraph has ended. 
-
-\subsection{\label{sec:level2}Second-level heading: Formatting}
-
-This file may be formatted in both the \texttt{preprint} (the default) and
-\texttt{reprint} styles; the latter format may be used to 
-mimic final journal output. Either format may be used for submission
-purposes; however, for peer review and production, AIP will format the
-article using the \texttt{preprint} class option. Hence, it is
-essential that authors check that their manuscripts format acceptably
-under \texttt{preprint}. Manuscripts submitted to AIP that do not
-format correctly under the \texttt{preprint} option may be delayed in
-both the editorial and production processes.
-
-The \texttt{widetext} environment will make the text the width of the
-full page, as on page~\pageref{eq:wideeq}. (Note the use the
-\verb+\pageref{#1}+ to get the page number right automatically.) The
-width-changing commands only take effect in \texttt{twocolumn}
-formatting. It has no effect if \texttt{preprint} formatting is chosen
-instead.
-
-\subsubsection{\label{sec:level3}Third-level heading: Citations and Footnotes}
-
-Citations in text refer to entries in the Bibliography;
-they use the commands \verb+\cite{#1}+ or \verb+\onlinecite{#1}+. 
-Because REV\TeX\ uses the \verb+natbib+ package of Patrick Daly, 
-its entire repertoire of commands are available in your document;
-see the \verb+natbib+ documentation for further details.
-The argument of \verb+\cite+ is a comma-separated list of \emph{keys};
-a key may consist of letters and numerals. 
-
-By default, citations are numerical; \cite{feyn54} author-year citations are an option. 
-To give a textual citation, use \verb+\onlinecite{#1}+: (Refs.~\onlinecite{witten2001,epr,Bire82}). 
-REV\TeX\ ``collapses'' lists of consecutive numerical citations when appropriate. 
-REV\TeX\ provides the ability to properly punctuate textual citations in author-year style;
-this facility works correctly with numerical citations only with \texttt{natbib}'s compress option turned off. 
-To illustrate, we cite several together \cite{feyn54,witten2001,epr,Berman1983}, 
-and once again (Refs.~\onlinecite{epr,feyn54,Bire82,Berman1983}). 
-Note that, when numerical citations are used, the references were sorted into the same order they appear in the bibliography. 
-
-A reference within the bibliography is specified with a \verb+\bibitem{#1}+ command,
-where the argument is the citation key mentioned above. 
-\verb+\bibitem{#1}+ commands may be crafted by hand or, preferably,
-generated by using Bib\TeX. 
-The AIP styles for REV\TeX~4 include Bib\TeX\ style files
-\verb+aipnum.bst+ and \verb+aipauth.bst+, appropriate for
-numbered and author-year bibliographies,
-respectively. 
-REV\TeX~4 will automatically choose the style appropriate for 
-the document's selected class options: the default is numerical, and
-you obtain the author-year style by specifying a class option of \verb+author-year+.
-
-This sample file demonstrates a simple use of Bib\TeX\ 
-via a \verb+\bibliography+ command referencing the \verb+aipsamp.bib+ file.
-Running Bib\TeX\ (in this case \texttt{bibtex
-aipsamp}) after the first pass of \LaTeX\ produces the file
-\verb+aipsamp.bbl+ which contains the automatically formatted
-\verb+\bibitem+ commands (including extra markup information via
-\verb+\bibinfo+ commands). If not using Bib\TeX, the
-\verb+thebibiliography+ environment should be used instead.
-
-\paragraph{Fourth-level heading is run in.}%
-Footnotes are produced using the \verb+\footnote{#1}+ command. 
-Numerical style citations put footnotes into the 
-bibliography\footnote{Automatically placing footnotes into the bibliography requires using BibTeX to compile the bibliography.}.
-Author-year and numerical author-year citation styles (each for its own reason) cannot use this method. 
-Note: due to the method used to place footnotes in the bibliography, \emph{you
-must re-run BibTeX every time you change any of your document's
-footnotes}. 
-
-\section{Math and Equations}
-Inline math may be typeset using the \verb+$+ delimiters. Bold math
-symbols may be achieved using the \verb+bm+ package and the
-\verb+\bm{#1}+ command it supplies. For instance, a bold $\alpha$ can
-be typeset as \verb+$\bm{\alpha}$+ giving $\bm{\alpha}$. Fraktur and
-Blackboard (or open face or double struck) characters should be
-typeset using the \verb+\mathfrak{#1}+ and \verb+\mathbb{#1}+ commands
-respectively. Both are supplied by the \texttt{amssymb} package. For
-example, \verb+$\mathbb{R}$+ gives $\mathbb{R}$ and
-\verb+$\mathfrak{G}$+ gives $\mathfrak{G}$
-
-In \LaTeX\ there are many different ways to display equations, and a
-few preferred ways are noted below. Displayed math will center by
-default. Use the class option \verb+fleqn+ to flush equations left.
-
-Below we have numbered single-line equations, the most common kind: 
-\begin{eqnarray}
-\chi_+(p)\alt{\bf [}2|{\bf p}|(|{\bf p}|+p_z){\bf ]}^{-1/2}
-\left(
-\begin{array}{c}
-|{\bf p}|+p_z\\
-px+ip_y
-\end{array}\right)\;,
-\\
-\left\{%
- \openone234567890abc123\alpha\beta\gamma\delta1234556\alpha\beta
- \frac{1\sum^{a}_{b}}{A^2}%
-\right\}%
-\label{eq:one}.
-\end{eqnarray}
-Note the open one in Eq.~(\ref{eq:one}).
-
-Not all numbered equations will fit within a narrow column this
-way. The equation number will move down automatically if it cannot fit
-on the same line with a one-line equation:
-\begin{equation}
-\left\{
- ab12345678abc123456abcdef\alpha\beta\gamma\delta1234556\alpha\beta
- \frac{1\sum^{a}_{b}}{A^2}%
-\right\}.
-\end{equation}
-
-When the \verb+\label{#1}+ command is used [cf. input for
-Eq.~(\ref{eq:one})], the equation can be referred to in text without
-knowing the equation number that \TeX\ will assign to it. Just
-use \verb+\ref{#1}+, where \verb+#1+ is the same name that used in
-the \verb+\label{#1}+ command.
-
-Unnumbered single-line equations can be typeset
-using the \verb+\[+, \verb+\]+ format:
-\[g^+g^+ \rightarrow g^+g^+g^+g^+ \dots ~,~~q^+q^+\rightarrow
-q^+g^+g^+ \dots ~. \]
-
-\subsection{Multiline equations}
-
-Multiline equations are obtained by using the \verb+eqnarray+
-environment.  Use the \verb+\nonumber+ command at the end of each line
-to avoid assigning a number:
-\begin{eqnarray}
-{\cal M}=&&ig_Z^2(4E_1E_2)^{1/2}(l_i^2)^{-1}
-\delta_{\sigma_1,-\sigma_2}
-(g_{\sigma_2}^e)^2\chi_{-\sigma_2}(p_2)\nonumber\\
-&&\times
-[\epsilon_jl_i\epsilon_i]_{\sigma_1}\chi_{\sigma_1}(p_1),
-\end{eqnarray}
-\begin{eqnarray}
-\sum \vert M^{\text{viol}}_g \vert ^2&=&g^{2n-4}_S(Q^2)~N^{n-2}
-        (N^2-1)\nonumber \\
- & &\times \left( \sum_{i<j}\right)
-  \sum_{\text{perm}}
- \frac{1}{S_{12}}
- \frac{1}{S_{12}}
- \sum_\tau c^f_\tau~.
-\end{eqnarray}
-\textbf{Note:} Do not use \verb+\label{#1}+ on a line of a multiline
-equation if \verb+\nonumber+ is also used on that line. Incorrect
-cross-referencing will result. Notice the use \verb+\text{#1}+ for
-using a Roman font within a math environment.
-
-To set a multiline equation without \emph{any} equation
-numbers, use the \verb+\begin{eqnarray*}+,
-\verb+\end{eqnarray*}+ format:
-\begin{eqnarray*}
-\sum \vert M^{\text{viol}}_g \vert ^2&=&g^{2n-4}_S(Q^2)~N^{n-2}
-        (N^2-1)\\
- & &\times \left( \sum_{i<j}\right)
- \left(
-  \sum_{\text{perm}}\frac{1}{S_{12}S_{23}S_{n1}}
- \right)
- \frac{1}{S_{12}}~.
-\end{eqnarray*}
-To obtain numbers not normally produced by the automatic numbering,
-use the \verb+\tag{#1}+ command, where \verb+#1+ is the desired
-equation number. For example, to get an equation number of
-(\ref{eq:mynum}),
-\begin{equation}
-g^+g^+ \rightarrow g^+g^+g^+g^+ \dots ~,~~q^+q^+\rightarrow
-q^+g^+g^+ \dots ~. \tag{2.6$'$}\label{eq:mynum}
-\end{equation}
-
-A few notes on \verb=\tag{#1}=. \verb+\tag{#1}+ requires
-\texttt{amsmath}. The \verb+\tag{#1}+ must come before the
-\verb+\label{#1}+, if any. The numbering set with \verb+\tag{#1}+ is
-\textit{transparent} to the automatic numbering in REV\TeX{};
-therefore, the number must be known ahead of time, and it must be
-manually adjusted if other equations are added. \verb+\tag{#1}+ works
-with both single-line and multiline equations. \verb+\tag{#1}+ should
-only be used in exceptional case - do not use it to number all
-equations in a paper.
-
-Enclosing single-line and multiline equations in
-\verb+\begin{subequations}+ and \verb+\end{subequations}+ will produce
-a set of equations that are ``numbered'' with letters, as shown in
-Eqs.~(\ref{subeq:1}) and (\ref{subeq:2}) below:
-\begin{subequations}
-\label{eq:whole}
-\begin{equation}
-\left\{
- abc123456abcdef\alpha\beta\gamma\delta1234556\alpha\beta
- \frac{1\sum^{a}_{b}}{A^2}
-\right\},\label{subeq:1}
-\end{equation}
-\begin{eqnarray}
-{\cal M}=&&ig_Z^2(4E_1E_2)^{1/2}(l_i^2)^{-1}
-(g_{\sigma_2}^e)^2\chi_{-\sigma_2}(p_2)\nonumber\\
-&&\times
-[\epsilon_i]_{\sigma_1}\chi_{\sigma_1}(p_1).\label{subeq:2}
-\end{eqnarray}
-\end{subequations}
-Putting a \verb+\label{#1}+ command right after the
-\verb+\begin{subequations}+, allows one to
-reference all the equations in a subequations environment. For
-example, the equations in the preceding subequations environment were
-Eqs.~(\ref{eq:whole}).
-
-\subsubsection{Wide equations}
-The equation that follows is set in a wide format, i.e., it spans
-across the full page. The wide format is reserved for long equations
-that cannot be easily broken into four lines or less:
-\begin{widetext}
-\begin{equation}
-{\cal R}^{(\text{d})}=
- g_{\sigma_2}^e
- \left(
-   \frac{[\Gamma^Z(3,21)]_{\sigma_1}}{Q_{12}^2-M_W^2}
-  +\frac{[\Gamma^Z(13,2)]_{\sigma_1}}{Q_{13}^2-M_W^2}
- \right)
- + x_WQ_e
- \left(
-   \frac{[\Gamma^\gamma(3,21)]_{\sigma_1}}{Q_{12}^2-M_W^2}
-  +\frac{[\Gamma^\gamma(13,2)]_{\sigma_1}}{Q_{13}^2-M_W^2}
- \right)\;. \label{eq:wideeq}
-\end{equation}
-\end{widetext}
-This is typed to show the output is in wide format.
-(Since there is no input line between \verb+\equation+ and
-this paragraph, there is no paragraph indent for this paragraph.)
-\section{Cross-referencing}
-REV\TeX{} will automatically number sections, equations, figure
-captions, and tables. In order to reference them in text, use the
-\verb+\label{#1}+ and \verb+\ref{#1}+ commands. To reference a
-particular page, use the \verb+\pageref{#1}+ command.
-
-The \verb+\label{#1}+ should appear in a section heading, within an
-equation, or in a table or figure caption. The \verb+\ref{#1}+ command
-is used in the text where the citation is to be displayed.  Some
-examples: Section~\ref{sec:level1} on page~\pageref{sec:level1},
-Table~\ref{tab:table1},%
+\subsection{STEM}
+\label{sec:STEM}
+All spectrum images (SI) have a field of view of $70nm$ and have been rotated through $\sim90^0$ so that the growth direction in all maps points upwards. AlN has been grown on top of Si substrate. AlN has been doped with 1-2\% of Tb and annealed.
 \begin{table}
-\caption{\label{tab:table1}This is a narrow table which fits into a
-text column when using \texttt{twocolumn} formatting. Note that
-REV\TeX~4 adjusts the intercolumn spacing so that the table fills the
-entire width of the column. Table captions are numbered
-automatically. This table illustrates left-aligned, centered, and
-right-aligned columns.  }
-\begin{ruledtabular}
-\begin{tabular}{lcr}
-Left\footnote{Note a.}&Centered\footnote{Note b.}&Right\\
-\hline
-1 & 2 & 3\\
-10 & 20 & 30\\
-100 & 200 & 300\\
-\end{tabular}
-\end{ruledtabular}
+	\caption{EELS data acquisition parameters for the two spectrum 	images (SI) acquired from the same area.}
+    \label{tab:Attributes}
+	\begin{ruledtabular}
+		\begin{tabular}{lll}
+			Attributes&Low loss SI&High loss SI							\\ \hline
+            Acceleration voltage (kV) &$60$&$60$						\\
+			Spatial image size (pixels)&$87\times100$&$87\times100$ 	\\
+            Real-space pixel size (\AA)&$7$&$7$							\\
+            Spectrum channels		&$2048$&$512$						\\
+			Dispersion (eV per channel)&$0.7$&$2.8$						\\
+			Nominal field of view (nm) &$70$&$70$						\\
+			Conv. angle ($\alpha$)(mrad)&$30$&$30$						\\
+			Coll. angle ($\beta$)(mrad)&$45$&$45$						\\
+			Spectrum offset (eV)&$0$&$310$								\\
+			Exposure time (seconds)&$8\times10^{-5}$&$1\times10^{-1}$	\\
+			Total acquisition time &$\sim700ms$&$\sim14m~30s$
+		\end{tabular}
+	\end{ruledtabular}
 \end{table}
-and Fig.~\ref{fig:epsart}.
+%\section{Low loss Spectrum image (SI) analysis}
+%\label{sec:SI_analysis}
+An annular dark-field (ADF) image is shown in Fig.~\ref{fig:HAADF}. The vertical lines in the ADF image are artefacts due to emission current fluctuations of the cold field emitter electron gun. A relative thickness map is shown in fig.~\ref{fig:tl}. The acquisition parameters of two EELS SI are listed in Table~\ref{tab:Attributes}. The inelastic mean free path ($\lambda$) values in Si (substrate), AlN:Tb region and SiO$_2$ region are $\approx49nm$, $\approx52nm$ and $\approx54nm$ respectively (reference to Egerton calculation). The values of the relative thickness ($t/\lambda$) map can thus be directly related to absolute specimen thickness ($t$) in the range of $13-20nm$.
+\begin{table}
+	\caption{Calculated mean free path ($\lambda$)}.
+    \label{tab:lambda}
+    \begin{ruledtabular}
+    	\begin{tabular}{lccc}
+        	Composition&Al:N:Tb:O&Si:O&Si:O										\\
+            at.\%&$48:49:2:1$&$33.3:66.7$&$99:1$								\\ \hline
+        	$\langle \text{Z} \rangle$&$11.05$&$10.00$&$13.94$					\\
+            $\langle \text{A} \rangle$&$23.15$&$20.03$&$27.97$					\\
+            $\langle \text{E} \rangle~\left[eV\right]$&$18.0$&$17.4$&$19.6$		\\
+           	$\lambda~\left[nm\right]$&$52.4$&$54.0$&$48.9$
+    	\end{tabular}
+    \end{ruledtabular}
+\end{table}
+For calculation of $t/\lambda$, the intensity of the spectra up to the minimum between zero-loss peak and plasmon peak is approximated as the intensity of the zero-loss ($I_0$). Hence $I_0$ contains not only zero-loss intensity, but also phonon losses, retardation and \v{C}erenkov losses etc. The total intensity ($I_t$) also contains, inter-band transitions, plasmon losses and ionization core-losses. Hence the $t/\lambda$ values calculated as per eqn.~\ref{eq:tl} will always be slight over-estimates (fig.~\ref{fig:tl}). More accurate ways to measure $t/\lambda$ would include fitting the bulk plasmon with a Lorentz function $L(E,E_p,W_p)$ (eqn.~\ref{eq:lorentz}) and the monochromated zero-loss with a Gaussian function $G(E,E_0,W_0)$ (eqn.~\ref{eq:gauss}) and weighting both according to a Poisson distribution $P(n,t/\lambda)$ simultaneously as shown in eqns.~\ref{eq:poisson} \& \ref{eq:low_loss}.
+\begin{eqnarray}
+	t/\lambda = \operatorname{ln}\left(\frac{I_t}{I_0}\right)
+    \label{eq:tl}
+\end{eqnarray}
+\begin{eqnarray}
+	P(n,t/\lambda) = \left(\frac{t}{\lambda}\right)^n\left(\frac{1}{n!}\right)\operatorname{exp}\left(-\frac{t}{\lambda}\right)
+    \label{eq:poisson}
+\end{eqnarray}
+\begin{eqnarray}
+	L(E,E_p,W_p) = \frac{A_p}{\pi} \frac{\frac{1}{2}W_p}{(E-E_p)^2+\left(\frac{1}{2}W_p\right)^2}
+    \label{eq:lorentz}
+\end{eqnarray}
+\begin{eqnarray}
+	G(E,E_0,W_0) &=& \frac{A_0}{\sqrt{\pi}}\frac{2\sqrt{\operatorname{ln}~2}}{W_0}\nonumber\\
+    & & \times \operatorname{exp}\left(-\left[(E-E_0)\frac{2\sqrt{\operatorname{ln}~2}}{W_0}\right]^2\right)
+    \label{eq:gauss}
+\end{eqnarray}
+\begin{eqnarray}
+	S(E,t/\lambda,E_0,W_0,E_p,W_p) = P(0,t/\lambda)~G(E,E_0,W_0) \nonumber \\
+     +\sum_{k=1}^{n}P(k,t/\lambda)~L(E,k\times E_p,W_p) \nonumber \\
+    \label{eq:low_loss}
+\end{eqnarray}
+where $n = \lfloor E_{max}/E_p \rfloor \in \mathbb{N}$.  $t/\lambda$, position ($E_0$) and full width at half maximum (FWHM) ($W_0$) of the zero-loss peak, position ($E_p$) and FWHM ($W_p$) of bulk plasmon are the fitting parameters. Eqn.~\ref{eq:tl} can be used as an initial estimate of $t/\lambda$ in multiple linear least squares (MLLS) fit of low loss in eqn.~\ref{eq:low_loss}. This can be extended to the entire SI which provides more accurate $t/\lambda$ values. Figs.~\ref{fig:Ep_map} and \ref{fig:Wp_map} are maps of $E_p$ and $W_p$ obtained from eqn.~\ref{eq:lorentz} where the values of the plasmon peak energy have been interpolated to sub-pixel precision ($\approx$0.1eV).
 
-\section{Figures and Tables}
-Figures and tables are typically ``floats''; \LaTeX\ determines their
-final position via placement rules. 
-\LaTeX\ isn't always successful in automatically placing floats where you wish them.
+\section{CL spectroscopy}
+\label{sec:CLS}
 
-Figures are marked up with the \texttt{figure} environment, the content of which
-imports the image (\verb+\includegraphics+) followed by the figure caption (\verb+\caption+).
-The argument of the latter command should itself contain a \verb+\label+ command if you
-wish to refer to your figure with \verb+\ref+.
-
-Import your image using either the \texttt{graphics} or
-\texttt{graphix} packages. These packages both define the
-\verb+\includegraphics{#1}+ command, but they differ in the optional
-arguments for specifying the orientation, scaling, and translation of the figure.
-Fig.~\ref{fig:epsart}%
+\section{Modelling}
+\label{sec:model}
+To further investigate the surroundings of Tb$^{3+}$ ions, we have performed simulations of an AlN supercell (consisting of 18 AlN unit cells) using MOPAC2012 \cite{steward12} with the extension SPARKLE \cite{freire10} to describe the rare-earth ion. For pure, undoped, AlN we found good agreement between the lattice constants of AlN predicted by our simulation (a = 3.12\AA; c = 5.05\AA) and previous reports (a = 3.11\AA; c = 4.98\AA) \cite{ICDD11}. Subsequently, we have replaced an Al$^{3+}$ ion with a Tb$^{3+}$ one, three N$^{3-}$ by O$^{2-}$, and another Al$^{3+}$ by a vacancy to ensure charge neutrality. Initially we distributed these lattice defects within the supercell so that they are spaced far apart and calculated the energy of formation of this 'random' state as our reference energy. We systematically varied the local arrangement, optimised the geometry, and compared the resulting energies of formation. We find that placing the oxygen ions in the nearest neighbouring positions of the terbium ion leads to an energy increase of around 2.5eV per supercell. In contrast, if the aluminium vacancy V$_\text{Al}$ is placed next to the terbium ion we find that the energy of formation is reduced by -1.38eV. This reduction is likely due to the release of strain energy which is introduced by the larger atomic radius of the Tb$^{3+}$ ion compared to the Al$^{3+}$ one. Gradually coordinating the aluminium vacancy with more and more oxygen ions leads to a further degrease in energy (-4.98eV). The geometry of this lowest energy state is shown in fig.~\ref{fig:felix_model}a. We denote these complexes according to the coordination of the vacancy, for instance the lowest energy one as (V$_\text{Al}$)(O)$_3$(NTb). Fig.~\ref{fig:felix_model}b shows an overview of the energies of different V$_\text{Al}-$N$-$Tb complexes (see SI for illustrations of the geometry of all complexes). Probably these complexes are formed during the annealing procedure, which is necessary to 'activate' the rare-earth luminescence.
 \begin{figure}
-\includegraphics{fig_1}% Here is how to import EPS art
-\caption{\label{fig:epsart} A figure caption. The figure captions are
-automatically numbered.}
+	\includegraphics[width=0.4\textwidth]{model}
+    \caption{(a)~Illustration of the lowest energy Tb$^{3+}$ complex. (b)~Comparison of the energies of formation of different Tb-N-V$_\text{Al}$ complexes. The names show the four nearest neighbours of the aluminium vacancy. (c)~High resolution cathodoluminescence spectrum of the $^5$D$_4$ to $^7$F$_5$ transition of Tb$^{3+}$ ions incorporated in AlN.}
+    \label{fig:felix_model}
 \end{figure}
-is small enough to fit in a single column, while
-Fig.~\ref{fig:wide}%
+From the fully relaxed structure we find a reduction of the local symmetry of the Tb$^{3+}$ lattice site from T$_\text{d}$ to C$_\text{3v}$, corresponding to a slight change in the bond length along one direction of the coordination tetrahedron. To verify this reduction in symmetry we have recorded cathodoluminescence spectra of the $^5$D$_4$ to $^7$F$_5$ transition of the trivalent terbium ions at 4K (see fig.~\ref{fig:felix_model}c). This transition reveals a seven-fold splitting of the $^7$F$_5$ energy level, which is consistent with the expected number of states in the case of the C$_\text{3v}$ symmetry (for T$_\text{d}$ only four states would be expected) \cite{henderson05}.
+
+\section{STEM EELS SI}
+\label{sec:STEMEELSSI}
+The elemental maps are shown in Fig.~\ref{fig:elemental_maps}. The background fitting details are listed in Table~\ref{tab:back_fit_table} along with the integration range ($\Delta$). The functions used to fit the background are exponential decay (eqn.~\ref{eq:exp_fun}) or inverse power-law functions (eqn.~\ref{eq:pow_law}).
+\begin{eqnarray}
+	f(E) =
+    \sum^{j=k}_{j=1}
+    \left[
+    \begin{array}{c}
+    	A_1 	\\
+        . 		\\
+        . 		\\
+        A_j 	\\
+    \end{array}
+    \right]
+    \operatorname{exp}\left(-\left[
+    \begin{array}{c}
+    	r_1 	\\
+        . 		\\
+        . 		\\
+        r_j 	\\
+    \end{array}
+    \right]E\right)
+    \label{eq:exp_fun}
+\end{eqnarray}
+\begin{eqnarray}
+	f(E) = AE^{-r}
+    \label{eq:pow_law}
+\end{eqnarray}
+\begin{table}
+	\caption{Background fitting details. All numerical values are in eV.}
+    \label{tab:back_fit_table}
+    \begin{ruledtabular}
+    	\begin{tabular}{lllllll}
+    		SI	&edge	 &fit begin&fit end&onset&$\Delta$&fit type 	\\ \hline
+            low loss&$Al~L_{2,3}$& $23.8$&$70$&$72.8$&$27.3$&$Exp2$\footnote{Superposition of two exponential decay functions (eqn.~\ref{eq:exp_fun}).} 		\\
+            		&$Si~L_{2,3}$&$41.3$&$98$&$99.4$&$105$&$Exp2$ 			\\ \hline
+            high loss&$N~K$&$343.6$&$385.6$&$385.6$&$112$&$Pow$\footnote{Inverse power-law function (eqn.~\ref{eq:pow_law})} 			\\
+                	&$O~K$&$427.6$&$517.2$&$525.6$&$112$&$Exp1$\footnote{Exponential decay function (eqn.~\ref{eq:exp_fun}).} 			\\
+            		&$Tb~M_{4,5}$&$727.2$&$1147.2$&$1211.6$&$246.4$&$Exp1$ 	\\
+    	\end{tabular}
+    \end{ruledtabular}
+\end{table}
+The value of $k = 1$ for fit type "$Exp1$", but $k = 2$ for fit type "$Exp2$" and Eqn~\ref{eq:pow_law} for fit type "$Pow$" as indicated in Table~\ref{tab:back_fit_table}. The Si L$_{2,3}$ edge and Al L$_{2,3}$ core-losses are extracted from low loss SI. N K, O K, Tb M$_{4,5}$ edges are extracted from high loss SI. The integration range ($\Delta$) for Al L$_{2,3}$ is limited by overlay with the Si L$_{2,3}$ edge. The maps of Al L$_{2,3}$ and Si L$_{2,3}$ (fig.~\ref{fig:qAlMap} \& \ref{fig:qSiMap}) are relatively noisy due to low exposure time and hence low signal to noise ratio (SNR). Large negative values in Si L$_{2,3}$ map are due to poor background fitting in the AlN region due to the preceding Al L$_{2,3}$ ionization edge. Deconvolution is not applied because of low SNR in the spectrum. Deconvolution with both Fourier-ratio or Richardson-Lucy (RL) methods would increase the noise even further. The interface in the high loss maps (\cref{fig:qNMap,fig:qOMap,fig:qTbMap}) appears to be inclined w.r.t the horizontal by an angle of $\approx4.65^\circ$ due to drift during the long exposure time while acquisition. Due to this mismatch in the interface, the atomic \% has been calculated only in the regions indicated in fig.~\ref{fig:40x87}. The FWHM  ($W_p$) of bulk plasmons (fig.~\ref{fig:Wp_map}) of oxides are known to be wider (refer). The evidence of drifting can be seen in O K map (map from high loss) (fig.~\ref{fig:qOMap}) and $W_p$ map (fig.~\ref{fig:Wp_map}).
+\begin{figure}
+	\includegraphics[scale=0.75]{40x87_region}
+    \caption{Marked box in the AlN region for the calculation of elemental map correlations.}
+    \label{fig:40x87}
+\end{figure}
+\begin{table}
+	\caption{Elemental quantification (at\%) in AlN:Tb region for top 40 rows}
+    \label{tab:atper}
+    \begin{ruledtabular}
+    	\begin{tabular}{ccccccc}
+        	Region&Al&N&Tb&O&Si	\\ \hline
+            AlN:Tb\&O&$43.17$&$38.66$&$1.40$&$15.78$&$0.01$ \\
+            Si\&O &$17.20$&$0$&$0.80$&$20.30$&$62.34$
+    	\end{tabular}
+    \end{ruledtabular}
+\end{table}
+
+\section{Discussion} %(Anti) correlation of elemental maps
+\label{sec:discussion}
+In case of N K and O K (\cref{fig:qNMap,fig:qOMap}), the contrast of the maps indicate anti-correlation i.e. in the AlN region, oxygen is replacing nitrogen (group V). Terbium must be replacing aluminium in the group III sub-lattice. Although the corresponding decrease in local Al contrast is too small to become visible in fig.~\ref{fig:qAlMap}. Table.~\ref{tab:xcorr} lists the cross-correlation values between the elemental maps in the top half of AlN marked in fig.~\ref{fig:40x87}. The cross correlation of nitrogen and terbium map is negative (between $0$ to $-1$). Similar observations can be made between nitrogen and oxygen. The cross-correlation between terbium and oxygen with positive cross correlation.  indicating formation of Tb-O complexes.
+\begin{table}
+	\caption{Cross correlation between elemental maps in $AlN$ region marked by box in fig.~\ref{fig:40x87}.}
+    \label{tab:xcorr}
+    \begin{ruledtabular}
+    	\begin{tabular}{cccccccc}
+        	$X_{corr}$&Al&N&Tb&O&Si													\\ \hline
+            Al& $1.0000$& $0.0802$& $0.0337$& $0.0012$&$-0.0920$					\\
+             N& $0.0802$& $1.0000$& $\textbf{-0.0366}$&$\textbf{-0.3694}$&$-0.0060$	\\
+            Tb& $0.0337$&$-0.0366$& $1.0000$& $\textbf{0.3466}$&$0.0064$			\\
+             O& $0.0012$&$-0.3694$&	$0.3466$& $1.0000$&$0.0188$						\\
+            Si&$-0.0920$&$-0.0060$&$0.0064$&$0.0188$& $1.0000$
+    	\end{tabular}
+    \end{ruledtabular}
+\end{table}
+
 \begin{figure*}
-\includegraphics{fig_2}% Here is how to import EPS art
-\caption{\label{fig:wide}Use the \texttt{figure*} environment to get a wide
-figure, spanning the page in \texttt{twocolumn} formatting.}
+	\centering
+    \begin{subfigure}{0.3\textwidth}
+    	\includegraphics[width=\textwidth]{HAADF_SI1}
+        \subcaption{}
+		\label{fig:HAADF}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+		\includegraphics[width=\textwidth]{relative_thickness_map_SI1}
+		\subcaption{}
+		\label{fig:tl}
+	\end{subfigure}
+    
+    \begin{subfigure}{0.3\textwidth}
+		\includegraphics[width=\textwidth]{Ep_map_SI1}
+		\subcaption{}
+		\label{fig:Ep_map}
+	\end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+		\includegraphics[width=\textwidth]{Wp_map_SI1}
+		\subcaption{}
+		\label{fig:Wp_map}
+	\end{subfigure}
+    \caption{(a)~HAADF and maps of (b)~relative thickness, (c)~plasmon peak energy, (d)~plasmon width.}
 \end{figure*}
-is too wide for a single column,
-so instead the \texttt{figure*} environment has been used.
 
-The analog of the \texttt{figure} environment is \texttt{table}, which uses
-the same \verb+\caption+ command.
-However, you should type your caption command first within the \texttt{table}, 
-instead of last as you did for \texttt{figure}.
+%\subsubsection{\label{sec:level3}Third-level heading: Citations and Footnotes}
 
-The heart of any table is the \texttt{tabular} environment,
-which represents the table content as a (vertical) sequence of table rows,
-each containing a (horizontal) sequence of table cells. 
-Cells are separated by the \verb+&+ character;
-the row terminates with \verb+\\+. 
-The required argument for the \texttt{tabular} environment
-specifies how data are displayed in each of the columns. 
-For instance, a column
-may be centered (\verb+c+), left-justified (\verb+l+), right-justified (\verb+r+),
-or aligned on a decimal point (\verb+d+). 
-(Table~\ref{tab:table4}%
-\begin{table}
-\caption{\label{tab:table4}Numbers in columns Three--Five have been
-aligned by using the ``d'' column specifier (requires the
-\texttt{dcolumn} package). 
-Non-numeric entries (those entries without
-a ``.'') in a ``d'' column are aligned on the decimal point. 
-Use the
-``D'' specifier for more complex layouts. }
-\begin{ruledtabular}
-\begin{tabular}{ccddd}
-One&Two&\mbox{Three}&\mbox{Four}&\mbox{Five}\\
-\hline
-one&two&\mbox{three}&\mbox{four}&\mbox{five}\\
-He&2& 2.77234 & 45672. & 0.69 \\
-C\footnote{Some tables require footnotes.}
-  &C\footnote{Some tables need more than one footnote.}
-  & 12537.64 & 37.66345 & 86.37 \\
-\end{tabular}
-\end{ruledtabular}
-\end{table}
-illustrates the use of decimal column alignment.)
+\begin{figure*}
+	\centering
+    \begin{subfigure}{0.3\textwidth}
+    	\includegraphics[width=\textwidth]{qAlMap}
+        \subcaption{}
+        \label{fig:qAlMap}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+    	\includegraphics[width=\textwidth]{qSiMap}
+        \subcaption{}
+        \label{fig:qSiMap}
+    \end{subfigure}
+    
+	\begin{subfigure}{0.3\textwidth}
+    	\includegraphics[width=\textwidth]{qNMap}
+        \subcaption{}
+        \label{fig:qNMap}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+    	\includegraphics[width=\textwidth]{qOMap}
+        \subcaption{}
+        \label{fig:qOMap}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+    	\includegraphics[width=\textwidth]{qTbMap}
+        \subcaption{}
+        \label{fig:qTbMap}
+    \end{subfigure}
+    \caption{Background subtracted intensities after the edge onset have been integrated and normalised w.r.t the corresponding scattering cross-sections and exposure times. (a,b)~Elemental maps of Al L$_{2,3}$ and Si L$_{2,3}$ in the low loss region. (c,d,e)~Elemental maps of N K, O K and Tb M$_{4,5}$ in the high loss region.}
+    \label{fig:elemental_maps}
+\end{figure*}
 
-Extra column-spacing may be be specified as well, although
-REV\TeX~4 sets this spacing so that the columns fill the width of the
-table.
-Horizontal rules are typeset using the \verb+\hline+
-command.
-The doubled (or Scotch) rules that appear at the top and
-bottom of a table can be achieved by enclosing the \texttt{tabular}
-environment within a \texttt{ruledtabular} environment.
-Rows whose columns span multiple columns can be typeset using \LaTeX's
-\verb+\multicolumn{#1}{#2}{#3}+ command
-(for example, see the first row of Table~\ref{tab:table3}).%
-\begin{table*}
-\caption{\label{tab:table3}This is a wide table that spans the page
-width in \texttt{twocolumn} mode. It is formatted using the
-\texttt{table*} environment. It also demonstrates the use of
-\textbackslash\texttt{multicolumn} in rows with entries that span
-more than one column.}
-\begin{ruledtabular}
-\begin{tabular}{ccccc}
- &\multicolumn{2}{c}{$D_{4h}^1$}&\multicolumn{2}{c}{$D_{4h}^5$}\\
- Ion&1st alternative&2nd alternative&lst alternative
-&2nd alternative\\ \hline
- K&$(2e)+(2f)$&$(4i)$ &$(2c)+(2d)$&$(4f)$ \\
- Mn&$(2g)$\footnote{The $z$ parameter of these positions is $z\sim\frac{1}{4}$.}
- &$(a)+(b)+(c)+(d)$&$(4e)$&$(2a)+(2b)$\\
- Cl&$(a)+(b)+(c)+(d)$&$(2g)$\footnote{This is a footnote in a table that spans the full page
-width in \texttt{twocolumn} mode. It is supposed to set on the full width of the page, just as the caption does. }
- &$(4e)^{\text{a}}$\\
- He&$(8r)^{\text{a}}$&$(4j)^{\text{a}}$&$(4g)^{\text{a}}$\\
- Ag& &$(4k)^{\text{a}}$& &$(4h)^{\text{a}}$\\
-\end{tabular}
-\end{ruledtabular}
-\end{table*}
-
-The tables in this document illustrate various effects.
-Tables that fit in a narrow column are contained in a \texttt{table}
-environment.
-Table~\ref{tab:table3} is a wide table, therefore set with the
-\texttt{table*} environment.
-Lengthy tables may need to break across pages.
-A simple way to allow this is to specify
-the \verb+[H]+ float placement on the \texttt{table} or
-\texttt{table*} environment.
-Alternatively, using the standard \LaTeXe\ package \texttt{longtable} 
-gives more control over how tables break and allows headers and footers 
-to be specified for each page of the table.
-An example of the use of \texttt{longtable} can be found
-in the file \texttt{summary.tex} that is included with the REV\TeX~4
-distribution.
-
-There are two methods for setting footnotes within a table (these
-footnotes will be displayed directly below the table rather than at
-the bottom of the page or in the bibliography).
-The easiest
-and preferred method is just to use the \verb+\footnote{#1}+
-command. This will automatically enumerate the footnotes with
-lowercase roman letters.
-However, it is sometimes necessary to have
-multiple entries in the table share the same footnote.
-In this case,
-create the footnotes using
-\verb+\footnotemark[#1]+ and \verb+\footnotetext[#1]{#2}+.
-\texttt{\#1} is a numeric value.
-Each time the same value for \texttt{\#1} is used, 
-the same mark is produced in the table. 
-The \verb+\footnotetext[#1]{#2}+ commands are placed after the \texttt{tabular}
-environment. 
-Examine the \LaTeX\ source and output for Tables~\ref{tab:table1} and 
-\ref{tab:table2}%
-\begin{table}
-\caption{\label{tab:table2}A table with more columns still fits
-properly in a column. Note that several entries share the same
-footnote. Inspect the \LaTeX\ input for this table to see
-exactly how it is done.}
-\begin{ruledtabular}
-\begin{tabular}{cccccccc}
- &$r_c$ (\AA)&$r_0$ (\AA)&$\kappa r_0$&
- &$r_c$ (\AA) &$r_0$ (\AA)&$\kappa r_0$\\
-\hline
-Cu& 0.800 & 14.10 & 2.550 &Sn\footnotemark[1]
-& 0.680 & 1.870 & 3.700 \\
-Ag& 0.990 & 15.90 & 2.710 &Pb\footnotemark[2]
-& 0.450 & 1.930 & 3.760 \\
-Au& 1.150 & 15.90 & 2.710 &Ca\footnotemark[3]
-& 0.750 & 2.170 & 3.560 \\
-Mg& 0.490 & 17.60 & 3.200 &Sr\footnotemark[4]
-& 0.900 & 2.370 & 3.720 \\
-Zn& 0.300 & 15.20 & 2.970 &Li\footnotemark[2]
-& 0.380 & 1.730 & 2.830 \\
-Cd& 0.530 & 17.10 & 3.160 &Na\footnotemark[5]
-& 0.760 & 2.110 & 3.120 \\
-Hg& 0.550 & 17.80 & 3.220 &K\footnotemark[5]
-&  1.120 & 2.620 & 3.480 \\
-Al& 0.230 & 15.80 & 3.240 &Rb\footnotemark[3]
-& 1.330 & 2.800 & 3.590 \\
-Ga& 0.310 & 16.70 & 3.330 &Cs\footnotemark[4]
-& 1.420 & 3.030 & 3.740 \\
-In& 0.460 & 18.40 & 3.500 &Ba\footnotemark[5]
-& 0.960 & 2.460 & 3.780 \\
-Tl& 0.480 & 18.90 & 3.550 & & & & \\
-\end{tabular}
-\end{ruledtabular}
-\footnotetext[1]{Here's the first, from Ref.~\onlinecite{feyn54}.}
-\footnotetext[2]{Here's the second.}
-\footnotetext[3]{Here's the third.}
-\footnotetext[4]{Here's the fourth.}
-\footnotetext[5]{And etc.}
-\end{table}
-for an illustration. 
-
-All AIP journals require that the initial citation of
-figures or tables be in numerical order.
-\LaTeX's automatic numbering of floats is your friend here:
-just put each \texttt{figure} environment immediately following 
-its first reference (\verb+\ref+), as we have done in this example file. 
+%\paragraph{Fourth-level heading is run in.}%
 
 \begin{acknowledgments}
-We wish to acknowledge the support of the author community in using
-REV\TeX{}, offering suggestions and encouragement, testing new versions,
+xyz
 \dots.
 \end{acknowledgments}
 
-\appendix
-
-\section{Appendixes}
-
-To start the appendixes, use the \verb+\appendix+ command.
-This signals that all following section commands refer to appendixes
-instead of regular sections. Therefore, the \verb+\appendix+ command
-should be used only once---to set up the section commands to act as
-appendixes. Thereafter normal section commands are used. The heading
-for a section can be left empty. For example,
-\begin{verbatim}
-\appendix
-\section{}
-\end{verbatim}
-will produce an appendix heading that says ``APPENDIX A'' and
-\begin{verbatim}
-\appendix
-\section{Background}
-\end{verbatim}
-will produce an appendix heading that says ``APPENDIX A: BACKGROUND''
-(note that the colon is set automatically).
-
-If there is only one appendix, then the letter ``A'' should not
-appear. This is suppressed by using the star version of the appendix
-command (\verb+\appendix*+ in the place of \verb+\appendix+).
-
-\section{A little more on appendixes}
-
-Observe that this appendix was started by using
-\begin{verbatim}
-\section{A little more on appendixes}
-\end{verbatim}
-
-Note the equation number in an appendix:
-\begin{equation}
-E=mc^2.
-\end{equation}
-
-\subsection{\label{app:subsec}A subsection in an appendix}
-
-You can use a subsection or subsubsection in an appendix. Note the
-numbering: we are now in Appendix~\ref{app:subsec}.
-
-\subsubsection{\label{app:subsubsec}A subsubsection in an appendix}
-Note the equation numbers in this appendix, produced with the
-subequations environment:
-\begin{subequations}
-\begin{eqnarray}
-E&=&mc, \label{appa}
-\\
-E&=&mc^2, \label{appb}
-\\
-E&\agt& mc^3. \label{appc}
-\end{eqnarray}
-\end{subequations}
-They turn out to be Eqs.~(\ref{appa}), (\ref{appb}), and (\ref{appc}).
-
-\nocite{*}
+%\nocite{*}
 \bibliography{aipsamp}% Produces the bibliography via BibTeX.
 
 \end{document}
