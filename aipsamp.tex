@@ -20,12 +20,12 @@
 % Use this file as a source of example code for your aip document.
 % Use the file aiptemplate.tex as a template for your document.
 \documentclass[%
- aip,
+aip,
 %jmp,%
 %bmf,%
 %sd,%
 rsi,%
- amsmath,amssymb,
+ amsmath,amssymb,%floatfix,
 %preprint,%
  reprint,%
 %author-year,%
@@ -39,7 +39,7 @@ rsi,%
 %\linenumbers\relax % Commence numbering lines
 
 %\usepackage{caption}
-\usepackage{subcaption}
+%\usepackage{subcaption}
 \usepackage{cleveref}
 
 \begin{document}
@@ -50,15 +50,15 @@ rsi,%
 %\thanks{Footnote to title of article.}
 
 \author{V.C. Angadi}
-%\email{vcangadi1@sheffield.ac.uk}
+\email[e-mail: ]{vcangadi1@sheffield.ac.uk}
 
 \author{T. Walther}%
-\email{t.walther@sheffield.ac.uk}
+\email[e-mail: ]{t.walther@sheffield.ac.uk}
 
 \affiliation{Dept. Electronic \& Electrical Eng., Kroto Centre for High-Resolution Imaging and Spectroscopy, University of Sheffield, North Campus, Wheeldon Street, Sheffield S3 7HQ, UK}
 
 \author{F. Benz}
-\affiliation{NanoPhotonics Centre, Cavendish Laboratory, Department of Physics, University of Cambridge, JJ Thomson Ave, Cambridge, CB3 0HE, United Kingdom}
+\affiliation{Institute of Materials Science, University of Stuttgart, Heisenbergstr. 3, 70569 Stuttgart, Germany}
 
 \author{T. Aoki}
 \affiliation{LeRoy Eyring Center for Solid State Science, Arizona State University, Tempe, AZ 85287, USA}
@@ -67,7 +67,7 @@ rsi,%
              %  but any date may be explicitly specified
 
 \begin{abstract}
-Analytical scanning transmission electron microscopy has been applied to study aluminium nitride (AlN) doped with terbium (Tb) and annealed at $800^\circ$C. Correlation of the maps of terbium and oxygen (O) from electron energy-loss spectrum image proves that these two elements co-segregate, replacing aluminium (Al) and nitrogen (N) atoms respectively. This agrees well with modelling which predicted the existence of Tb$-$O complexes to successfully fit the rather complicated cathodoluminescence emission spectra of the sample.
+Analytical scanning transmission electron microscopy (STEM) has been applied to study aluminium nitride (AlN) doped with terbium (Tb) and annealed at $800^\circ$C. Correlation of the maps of Tb and oxygen (O) from electron energy-loss spectrum (EELS) imaging proves that these two elements co-segregate, replacing aluminium (Al) and nitrogen (N) atoms, respectively. This agrees well with modelling which predicted the existence of Tb$-$O complexes to successfully fit the rather complicated cathodoluminescence (CL) emission spectrum of the sample.
 
 %Valid PACS numbers may be entered using the \verb+\pacs{#1}+ command.
 \end{abstract}
@@ -79,26 +79,25 @@ Analytical scanning transmission electron microscopy has been applied to study a
                               %display desired
 \maketitle
 
-\section{Introduction:}
+\section{Introduction}
 \label{sec:Intro}
-(general info on Tb emission spectra, luminescence, AlN, modelling, need for analytical STEM.)
 
+In general rare-earth metal dopants\cite{Kenyon2003,Kenyon2002} produce narrow optical emission lines almost insensitive to temperature. Hence, they find application in cathode ray tubes (CRTs), optical fibres, electroluminescence etc\cite{Aitasalo2003}. Tb is a very important rare-earth metal dopant in semiconductors and is used for green emission. A common application of Tb is tuning the green light component in incandescent lamps which give white light. Over the years there has been a lot of research on creating ultra-violet (UV) light emitting diodes (LEDs). In principle, AlN with a 6.2eV bandgap should be able to give an emission at $\sim$200nm, but there are difficulties to overcome to make such UV emitters commercially available. AlN combines high thermal conductivity with low electrical conductivity, which makes it ideal for certain electronic applications, e.g. as heat sinks, substrates for devices with low leakage currents. The Tb$-$Tb ionic interactions in semiconductors can be exploited to tune the emission from green to blue \cite{Benz2013}, however dopant segregation is one of the problems in manufacturing such semiconductor devices \cite{Keizer2015}. The segregation of Tb in AlN can be studied and observed by spectroscopy methods like CL and EELS. The possible formation of Tb complexes in Tb doped AlN has been speculated about CL based spectroscopy \cite{Benz2013_AlNTb}. As the concentration of Tb is typically very low, hence a high resolution analytical STEM is needed to confirm such segregation of single atoms into small complexes.
 \section{Experimental Details}
 \label{sec:exp_detail}
-
-\subsection{Growth + Anneal details}
+\subsection{AlN:Tb deposition}
 \label{sec:growth}
-(from Felix's thesis)
+The AlN:Tb films were prepared by reactive direct current (DC) magnetron sputtering on silicon (Si) (100), which was used as received. Two Al targets (150~W each) and one Tb target (14~W) were used. As a sputtering atmosphere served a mixture of 75~\% N and 25~\% argon with a total pressure of $6 \times 10^{-3}$~mbar. After the sputtering the films were annealed at 800$^\circ$C for 30~min under a 1~bar N atmosphere to avoid decomposition. The annealing step is required to 'activate' the Tb luminescence - the intensity increases by a factor of approximately 25 during this treatment.
 
 \subsection{Cathodoluminescence details}
 \label{sec:CL}
-(from thesis)
+We have performed CL spectroscopy in order to observe the characteristic Tb\textsuperscript{3+} luminescence. The narrow line-width of the Tb\textsuperscript{3+} emission at 9~K allowed us to examine splitting into a number of sub-levels depending on the coordination symmetry of Tb\textsuperscript{3+} (crystal field splitting). To do so we have used an acceleration voltage of 7~kV and a working distance of 4~mm. (details on SEM type and spectrometer needed!).
 
 \subsection{STEM}
 \label{sec:STEM}
-All spectrum images (SI) have a field of view of $70nm$ and have been rotated through $\sim90^0$ so that the growth direction in all maps points upwards. AlN has been grown on top of Si substrate. AlN has been doped with 1-2\% of Tb and annealed.
-\begin{table}[!ht]
-	\caption{EELS data acquisition parameters for the two spectrum 	images (SI) acquired from the same area.}
+The STEM experiments were carried out using a Nion UltraSTEM 100 equipped with a Nion HERMES monochromator, aberration corrector and Gatan Enfinium ER spectrometer for EELS \cite{Krivanek2013,Krivanek2015}. The microscope was operated at 60kV with 30mrad beam convergence semi-angle. No energy-selecting slit in the dispersive plane of the monochromator was used, providing  ~0.12nm probe size (nominal spot size of 2i), with $\sim$300pA beam current at an energy resolution better than 0.35eV, as given by the characteristics of the cold field emitter electron gun. The collection semi-angle was $>$90mrad for high-angle annular dark field (HAADF) imaging and $<$45mrad with 3mm entrance aperture for EELS. Spectra were acquired with the charge-coupled device (CCD) detector in single read-out, vertical integration mode and a binning factor of 2 for fast acquisition to avoid electron beam-induced damage of the sample. This gave an effective energy dispersion of 0.7eV/channel where the apparent width of the zero loss peak was limited by the detector point spread function rather than the actual energy spread of the electrons. The acquisition parameters of two EELS SI are listed in Table~\ref{tab:Attributes}.
+\begin{table}%[!ht]
+	\caption{EELS data acquisition parameters for the two spectrum images (SI) acquired from the same area.}
     \label{tab:Attributes}
 	\begin{ruledtabular}
 		\begin{tabular}{lll}
@@ -109,27 +108,35 @@ All spectrum images (SI) have a field of view of $70nm$ and have been rotated th
             Spectrum channels		&$2048$&$512$						\\
 			Dispersion (eV per channel)&$0.7$&$2.8$						\\
 			Nominal field of view (nm) &$70$&$70$						\\
-			Conv. angle ($\alpha$)(mrad)&$30$&$30$						\\
-			Coll. angle ($\beta$)(mrad)&$45$&$45$						\\
+			Conv. semi-angle ($\alpha$)(mrad)&$30$&$30$					\\
+			Coll. semi-angle ($\beta$)(mrad)&$45$&$45$					\\
 			Spectrum offset (eV)&$0$&$310$								\\
 			Exposure time (seconds)&$8\times10^{-5}$&$1\times10^{-1}$	\\
-			Total acquisition time &$\sim700ms$&$\sim14m~30s$
+			Total acquisition time &$\sim700ms$&$\sim14min~30s$
 		\end{tabular}
 	\end{ruledtabular}
 \end{table}
 
+\section{Modelling}
+\label{sec:model}
+To further investigate the surroundings of Tb$^{3+}$ ions, we have performed simulations of an AlN supercell (consisting of 18 actual AlN unit cells) using the MOPAC2012 software \cite{steward12} with the extension SPARKLE \cite{freire10} to describe the rare-earth ion. For pure, undoped AlN we found good agreement between the lattice constants of AlN predicted by our simulation (a = 3.12\AA; c = 5.05\AA) and previous reports (a = 3.11\AA; c = 4.98\AA) \cite{ICDD11}. Subsequently, we have replaced an Al$^{3+}$ ion with a Tb$^{3+}$ one, three N$^{3-}$ by O$^{2-}$, and another Al$^{3+}$ by a vacancy to ensure charge neutrality. Initially we distributed these lattice defects within the supercell so that they were spaced far apart and calculated the energy of formation of this 'random' state as our reference energy. We systematically varied the local arrangement, optimised the geometry, and compared the resulting energies of formation. We find that placing the O ions in the nearest neighbouring positions of the Tb ion leads to an energy increase of around 2.5eV per supercell. In contrast, if the Al vacancy V$_\text{Al}$ is placed next to the Tb ion we find that the energy of formation is reduced by -1.38eV. This reduction is likely due to the release of strain energy which is introduced by the larger atomic radius of the Tb$^{3+}$ ion compared to the Al$^{3+}$ one. Gradually coordinating the Al vacancy with more and more O anions leads to a further degrease in energy (-4.98eV). The geometry of this hypothetical lowest energy state is shown in fig.~\ref{fig:felix_model}a. We denote these complexes according to the coordination of the vacancy, for instance the lowest energy one as (V$_\text{Al}$)(O)$_3$(NTb). Fig.~\ref{fig:felix_model}b shows an overview of the energies of different V$_\text{Al}-$N$-$Tb complexes considered. Probably these complexes are formed during the annealing procedure, which is necessary to 'activate' the rare-earth luminescence. From the fully relaxed structure we find a reduction of the local symmetry of the Tb$^{3+}$ lattice site from \textit{T$_\text{d}$} to \textit{C$_\text{3v}$}, corresponding to a slight change in the bond length along one direction of the coordination tetrahedron. To verify this reduction in symmetry we have recorded CL spectra of the $^5$D$_4$ to $^7$F$_5$ transition of the trivalent Tb ions at 9~K (see fig.~\ref{fig:felix_model}c). This transition reveals a seven-fold splitting of the $^7$F$_5$ energy level, which is consistent with the expected number of states in the case of the \textit{C$_\text{3v}$} symmetry (for \textit{T$_\text{d}$} only four states would be expected) \cite{henderson05}.
+\begin{figure}%[!ht]
+	\includegraphics[width=0.3\textwidth]{model}
+    \caption{(a)~Illustration of the lowest energy Tb$^{3+}$ complex. (b)~Comparison of the energies of formation of different Tb-N-V$_\text{Al}$ complexes. The names show the four nearest neighbours of the Al vacancy. (c)~High resolution CL spectrum of the $^5$D$_4$ to $^7$F$_5$ transition of Tb$^{3+}$ ions incorporated in AlN.}
+    \label{fig:felix_model}
+\end{figure}
+
+\section{STEM EELS SI}
+\label{sec:STEMEELSSI}
 \begin{figure}
 	\centering
     \includegraphics[width=0.5\textwidth]{combined_haadf}
     \caption{(a)~HAADF and maps of (b)~relative thickness, (c)~plasmon peak energy, (d)~plasmon width.}
     \label{fig:combined_haadf}
 \end{figure}
-
-%\section{Low loss Spectrum image (SI) analysis}
-%\label{sec:SI_analysis}
-An annular dark-field (ADF) image is shown in Fig.~\ref{fig:combined_haadf}a. The vertical lines in the ADF image are artefacts due to emission current fluctuations of the cold field emitter electron gun. A relative thickness map is shown in fig.~\ref{fig:combined_haadf}b. The acquisition parameters of two EELS SI are listed in Table~\ref{tab:Attributes}. The inelastic mean free path ($\lambda$) values in Si (substrate), AlN:Tb region and SiO$_2$ region are $\approx49nm$, $\approx52nm$ and $\approx54nm$ respectively (reference to Egerton calculation). The values of the relative thickness ($t/\lambda$) map can thus be directly related to absolute specimen thickness ($t$) in the range of $13-20nm$.
-\begin{table}[!ht]
-	\caption{Calculated mean free path ($\lambda$)}.
+All acquired SI have a field of view of $70nm$ and have been rotated through $\sim90^0$ so that the growth direction in all maps points upwards (AlN on top of Si). A HAADF image is shown in Fig.~\ref{fig:combined_haadf}a. The vertical lines in the HAADF image are artefacts due to emission current fluctuations of the cold field emitter electron gun. A relative thickness map is shown in fig.~\ref{fig:combined_haadf}b. The inelastic mean free path ($\lambda$) values in Si (substrate), AlN:Tb region and SiO$_2$ region at $60kV$ are $\approx49nm$, $\approx52nm$ and $\approx54nm$, respectively \cite{egerton2011}. The values of the relative thickness ($t/\lambda$) map can thus be directly related to absolute specimen thickness ($t$) in the range of $13-20nm$.
+\begin{table}%[!ht]
+	\caption{Calculated mean free paths ($\lambda$)}.
     \label{tab:lambda}
     \begin{ruledtabular}
     	\begin{tabular}{lccc}
@@ -142,8 +149,7 @@ An annular dark-field (ADF) image is shown in Fig.~\ref{fig:combined_haadf}a. Th
     	\end{tabular}
     \end{ruledtabular}
 \end{table}
-For calculation of $t/\lambda$, the intensity of the spectra up to the minimum between zero-loss peak and plasmon peak is approximated as the intensity of the zero-loss ($I_0$). Hence $I_0$ contains not only zero-loss intensity, but also phonon losses, retardation and \v{C}erenkov losses etc. The total intensity ($I_t$) also contains, inter-band transitions, plasmon losses and ionization core-losses. Hence the $t/\lambda$ values calculated as per eqn.~\ref{eq:tl} will always be slight over-estimates (fig.~\ref{fig:combined_haadf}b). More accurate ways to measure $t/\lambda$ would include fitting the bulk plasmon with a Lorentz function $L(E,E_p,W_p)$ (eqn.~\ref{eq:lorentz}) and the monochromated zero-loss with a Gaussian function $G(E,E_0,W_0)$ (eqn.~\ref{eq:gauss}) and weighting both according to a Poisson distribution $P(n,t/\lambda)$ simultaneously as shown in eqns.~\ref{eq:poisson} \& \ref{eq:low_loss}.
-
+For calculation of $t/\lambda$, the intensity of the spectra up to the minimum between zero-loss peak and plasmon peak is approximated as the intensity of the zero-loss ($I_0$). Hence $I_0$ contains not only zero-loss intensity, but also phonon losses, some retardation and \v{C}erenkov losses etc. The total intensity ($I_t$) also contains inter-band transitions, plasmon losses and ionization core-losses. Hence the $t/\lambda$ values calculated from eqn.~\ref{eq:tl} will always be slight over-estimates (fig.~\ref{fig:combined_haadf}b). More accurate ways to measure $t/\lambda$ would include fitting the bulk plasmon with a Lorentz function $L(E,E_p,W_p)$ (eqn.~\ref{eq:lorentz}) and the monochromated zero-loss with a Gaussian function $G(E,E_0,W_0)$ (eqn.~\ref{eq:gauss}) and weighting both according to a Poisson distribution $P(n,t/\lambda)$ simultaneously, as shown in eqns.~\ref{eq:poisson} \& \ref{eq:low_loss}.
 \begin{eqnarray}
 	t/\lambda = \operatorname{ln}\left(\frac{I_t}{I_0}\right)
     \label{eq:tl}
@@ -166,25 +172,7 @@ For calculation of $t/\lambda$, the intensity of the spectra up to the minimum b
      +\sum_{k=1}^{n}P(k,t/\lambda)~L(E,k\times E_p,W_p) \nonumber \\
     \label{eq:low_loss}
 \end{eqnarray}
-where $n = \lfloor E_{max}/E_p \rfloor \in \mathbb{N}$.  $t/\lambda$, position ($E_0$) and full width at half maximum (FWHM) ($W_0$) of the zero-loss peak, position ($E_p$) and FWHM ($W_p$) of bulk plasmon are the fitting parameters. Eqn.~\ref{eq:tl} can be used as an initial estimate of $t/\lambda$ in multiple linear least squares (MLLS) fit of low loss in eqn.~\ref{eq:low_loss}. This can be extended to the entire SI which provides more accurate $t/\lambda$ values. Figs.~\ref{fig:combined_haadf}c and \ref{fig:combined_haadf}d are maps of $E_p$ and $W_p$ obtained from eqn.~\ref{eq:lorentz} where the values of the plasmon peak energy have been interpolated to sub-pixel precision ($\approx$0.1eV).
-
-\section{CL spectroscopy}
-\label{sec:CLS}
-
-\section{Modelling}
-\label{sec:model}
-To further investigate the surroundings of Tb$^{3+}$ ions, we have performed simulations of an AlN supercell (consisting of 18 AlN unit cells) using MOPAC2012 \cite{steward12} with the extension SPARKLE \cite{freire10} to describe the rare-earth ion. For pure, undoped, AlN we found good agreement between the lattice constants of AlN predicted by our simulation (a = 3.12\AA; c = 5.05\AA) and previous reports (a = 3.11\AA; c = 4.98\AA) \cite{ICDD11}. Subsequently, we have replaced an Al$^{3+}$ ion with a Tb$^{3+}$ one, three N$^{3-}$ by O$^{2-}$, and another Al$^{3+}$ by a vacancy to ensure charge neutrality. Initially we distributed these lattice defects within the supercell so that they are spaced far apart and calculated the energy of formation of this 'random' state as our reference energy. We systematically varied the local arrangement, optimised the geometry, and compared the resulting energies of formation. We find that placing the oxygen ions in the nearest neighbouring positions of the terbium ion leads to an energy increase of around 2.5eV per supercell. In contrast, if the aluminium vacancy V$_\text{Al}$ is placed next to the terbium ion we find that the energy of formation is reduced by -1.38eV. This reduction is likely due to the release of strain energy which is introduced by the larger atomic radius of the Tb$^{3+}$ ion compared to the Al$^{3+}$ one. Gradually coordinating the aluminium vacancy with more and more oxygen ions leads to a further degrease in energy (-4.98eV). The geometry of this lowest energy state is shown in fig.~\ref{fig:felix_model}a. We denote these complexes according to the coordination of the vacancy, for instance the lowest energy one as (V$_\text{Al}$)(O)$_3$(NTb). Fig.~\ref{fig:felix_model}b shows an overview of the energies of different V$_\text{Al}-$N$-$Tb complexes (see SI for illustrations of the geometry of all complexes). Probably these complexes are formed during the annealing procedure, which is necessary to 'activate' the rare-earth luminescence.
-\begin{figure}[!ht]
-	\includegraphics[width=0.4\textwidth]{model}
-    \caption{(a)~Illustration of the lowest energy Tb$^{3+}$ complex. (b)~Comparison of the energies of formation of different Tb-N-V$_\text{Al}$ complexes. The names show the four nearest neighbours of the aluminium vacancy. (c)~High resolution cathodoluminescence spectrum of the $^5$D$_4$ to $^7$F$_5$ transition of Tb$^{3+}$ ions incorporated in AlN.}
-    \label{fig:felix_model}
-\end{figure}
-From the fully relaxed structure we find a reduction of the local symmetry of the Tb$^{3+}$ lattice site from T$_\text{d}$ to C$_\text{3v}$, corresponding to a slight change in the bond length along one direction of the coordination tetrahedron. To verify this reduction in symmetry we have recorded cathodoluminescence spectra of the $^5$D$_4$ to $^7$F$_5$ transition of the trivalent terbium ions at 4K (see fig.~\ref{fig:felix_model}c). This transition reveals a seven-fold splitting of the $^7$F$_5$ energy level, which is consistent with the expected number of states in the case of the C$_\text{3v}$ symmetry (for T$_\text{d}$ only four states would be expected) \cite{henderson05}.
-
-\section{STEM EELS SI}
-\label{sec:STEMEELSSI}
-The elemental maps are shown in Fig.~\ref{fig:combined_maps}. The background fitting details are listed in Table~\ref{tab:back_fit_table} along with the integration range ($\Delta$). The functions used to fit the background are exponential decay (eqn.~\ref{eq:exp_fun}) or inverse power-law functions (eqn.~\ref{eq:pow_law}).
-
+where $n = \lfloor E_{max}/E_p \rfloor \in \mathbb{N}$ is the integer number of plasmon losses considered. $t/\lambda$, position ($E_0$) and full width at half maximum (FWHM) ($W_0$) of the zero-loss peak, position ($E_p$) and FWHM ($W_p$) of bulk plasmon are the fitting parameters. Eqn.~\ref{eq:tl} can be used as an initial estimate of $t/\lambda$ in multiple linear least-squares (MLLS) fitting of the low loss in eqn.~\ref{eq:low_loss}. This can be extended to the entire SI, which provides more accurate $t/\lambda$ values. Figs.~\ref{fig:combined_haadf}c and \ref{fig:combined_haadf}d are maps of $E_p$ and $W_p$ obtained from eqn.~\ref{eq:lorentz} where the values of the plasmon peak energy have been interpolated to sub-pixel precision ($\approx$0.1eV). The FWHM  ($W_p$) of bulk plasmons (fig.~\ref{fig:combined_haadf}d) of oxides are known to be wider than those of compound semi-conductors. Elemental maps are shown in Fig.~\ref{fig:combined_maps}a-\ref{fig:combined_maps}e. The background fitting details are listed in Table~\ref{tab:back_fit_table} along with the integration ranges ($\Delta$). The functions used to fit the background are exponential decay (eqn.~\ref{eq:exp_fun}) or inverse power-law functions (eqn.~\ref{eq:pow_law}).
 \begin{eqnarray}
 	f(E) =
     \sum^{j=k}_{j=1}
@@ -206,13 +194,11 @@ The elemental maps are shown in Fig.~\ref{fig:combined_maps}. The background fit
     \right]E\right)
     \label{eq:exp_fun}
 \end{eqnarray}
-
 \begin{eqnarray}
 	f(E) = AE^{-r}
     \label{eq:pow_law}
 \end{eqnarray}
-
-\begin{table}[!ht]
+\begin{table}%[!ht]
 	\caption{Background fitting details. All numerical values are in eV.}
     \label{tab:back_fit_table}
     \begin{ruledtabular}
@@ -226,33 +212,30 @@ The elemental maps are shown in Fig.~\ref{fig:combined_maps}. The background fit
     	\end{tabular}
     \end{ruledtabular}
 \end{table}
-The value of $k = 1$ for fit type "$Exp1$", but $k = 2$ for fit type "$Exp2$" and Eqn~\ref{eq:pow_law} for fit type "$Pow$" as indicated in Table~\ref{tab:back_fit_table}. The Si L$_{2,3}$ edge and Al L$_{2,3}$ core-losses are extracted from low loss SI. N K, O K, Tb M$_{4,5}$ edges are extracted from high loss SI. The integration range ($\Delta$) for Al L$_{2,3}$ is limited by overlay with the Si L$_{2,3}$ edge. The maps of Al L$_{2,3}$ and Si L$_{2,3}$ (fig.~\ref{fig:combined_maps}a \& \ref{fig:combined_maps}d) are relatively noisy due to low exposure time and hence low signal to noise ratio (SNR). Large negative values in Si L$_{2,3}$ map are due to poor background fitting in the AlN region due to the preceding Al L$_{2,3}$ ionization edge. Deconvolution is not applied because of low SNR in the spectrum. Deconvolution with both Fourier-ratio or Richardson-Lucy (RL) methods would increase the noise even further. The interface in the high loss maps (figs.~\ref{fig:combined_maps}b, \ref{fig:combined_maps}c \& \ref{fig:combined_maps}e) appears to be inclined w.r.t the horizontal by an angle of $\approx4.65^\circ$ due to drift during the long exposure time while acquisition. Due to this mismatch in the interface, the atomic \% has been calculated only in the regions indicated in fig.~\ref{fig:combined_maps}f. The FWHM  ($W_p$) of bulk plasmons (fig.~\ref{fig:combined_haadf}d) of oxides are known to be wider (refer). The evidence of drifting can be seen in O K map (map from high loss) (fig.~\ref{fig:combined_maps}c) and $W_p$ map (fig.~\ref{fig:combined_haadf}d).
-
-\begin{figure}[!ht]
-	\centering
+The value of $k = 1$ for fit type "$Exp1$", but $k = 2$ for fit types "$Exp2$" and eqn.~\ref{eq:pow_law} for fit type "$Pow$" as indicated in Table~\ref{tab:back_fit_table}. The Si L$_{2,3}$ edge and Al L$_{2,3}$ core-losses are extracted from low loss SI. N K, O K and Tb M$_{4,5}$ edges are extracted from high loss SI. The integration range ($\Delta$) for Al L$_{2,3}$ is limited by overlap with the Si L$_{2,3}$ edge. The maps of Al L$_{2,3}$ and Si L$_{2,3}$ (fig.~\ref{fig:combined_maps}a \& \ref{fig:combined_maps}b) are relatively noisy due to the low exposure time and hence low signal-to-noise ratio (SNR). Large negative values in the Si L$_{2,3}$ map are due to poor background fitting in the AlN region due to the preceding Al L$_{2,3}$ ionization edge. Deconvolution is not applied because of the low SNR in the spectrum: deconvolution by Fourier-ratio or Richardson-Lucy methods would increase the noise even further. The interface in the high loss maps (figs.~\ref{fig:combined_maps}c-\ref{fig:combined_maps}e) appears to be inclined w.r.t the horizontal by an angle of $\approx4.6^\circ$ due to drift during the long time of acquisition. Due to this mismatch in the interface, the atomic \% values have been calculated only in the regions indicated in fig.~\ref{fig:combined_maps}f. Some evidence of drift in apparent SiO$_2$ layer widths in can be seen in fig.~\ref{fig:combined_haadf}d and fig.~\ref{fig:combined_maps}c.
+\begin{figure}%[!ht]
     \includegraphics[width=0.5\textwidth]{combined_maps}
-    \caption{Background subtracted intensities after the edge onset have been integrated and normalised w.r.t the corresponding scattering cross-sections and exposure times. (a,d)~Elemental maps of Al L$_{2,3}$ and Si L$_{2,3}$ in the low loss region. (b,c,e)~Elemental maps of N K, O K and Tb M$_{4,5}$ in the high loss region. (f)~Marked box in the spectrum image (AlN region) is used for the calculation of correlation between elemental maps.}
+    \caption{Background subtracted net intensities after the edge onsets have been integrated and normalised w.r.t the corresponding scattering cross-sections and exposure times. Elemental maps of Al L$_{2,3}$ (a) and Si L$_{2,3}$ (b) in the low loss region. Elemental maps of N K (c), O K (d) and Tb M$_{4,5}$ (e) in the high loss region. (f)~Marked boxes in the AlN region (A) and Si substrate region (B) were used for the calculation of correlation between elemental maps.}
     \label{fig:combined_maps}
 \end{figure}
-
-\begin{table}[!ht]
-	\caption{Elemental quantification (at\%) in AlN:Tb region for top 40 rows}
+\\
+\begin{table}%[!ht]
+	\caption{Elemental quantification (at\%) in AlN:Tb and Si region for top 40 rows.}
     \label{tab:atper}
     \begin{ruledtabular}
     	\begin{tabular}{ccccccc}
-        	Region&Al&N&Tb&O&Si	\\ \hline
-            AlN:Tb\&O&$43.17$&$38.66$&$1.40$&$15.78$&$0.01$ \\
-            Si\&O &$17.20$&$0$&$0.80$&$20.30$&$62.34$
+        	&Region&Al&N&Tb&O&Si								\\ \hline
+            A&AlN:Tb&$43.2$&$38.7$&$1.4$&$15.8$&$0.01$   \\
+            B&Si &$17.2$&$0$&$0.8$&$20.3$&$62.3$
     	\end{tabular}
     \end{ruledtabular}
 \end{table}
 
 \section{Discussion} %(Anti) correlation of elemental maps
 \label{sec:discussion}
-In case of N K and O K (figs.~\ref{fig:combined_maps}b~\&~\ref{fig:combined_maps}c), the contrast of the maps indicate anti-correlation i.e. in the AlN region, oxygen is replacing nitrogen (group V). Terbium must be replacing aluminium in the group III sub-lattice. Although the corresponding decrease in local Al contrast is too small to become visible in fig.~\ref{fig:combined_maps}a. Table.~\ref{tab:xcorr} lists the cross-correlation values between the elemental maps in the top half of AlN marked in fig.~\ref{fig:combined_maps}f. The cross correlation of nitrogen and terbium map is negative (between $0$ to $-1$). Similar observations can be made between nitrogen and oxygen. The cross-correlation between terbium and oxygen with positive cross correlation.  indicating formation of Tb-O complexes.
-
-\begin{table}[!ht]
-	\caption{Cross correlation between elemental maps in $AlN$ region marked by box in fig.~\ref{fig:combined_maps}f.}
+In case of N K and O K (figs.~\ref{fig:combined_maps}b~\&~\ref{fig:combined_maps}c), the contrast of the maps indicates anti-correlation, i.e. in the AlN region, O is replacing N (group V sub-lattice). Tb must be replacing Al in the group III sub-lattice, although the corresponding decrease in local Al contrast is too small to become clearly visible in fig.~\ref{fig:combined_maps}a. Table~\ref{tab:xcorr} lists the cross-correlation values between the elemental maps in the top half of AlN marked in fig.~\ref{fig:combined_maps}f. The cross correlation of N and Tb map is negative. Similar observations can be made between N and O. The cross-correlation between Tb and O maps is positive, indicating the formation of Tb-O complexes. Hence this supports the atomic structure model in fig.~\ref{fig:felix_model}a.
+\begin{table}%[!ht]
+	\caption{Cross-correlation between elemental maps in $AlN$ region marked by box in fig.~\ref{fig:combined_maps}f.}
     \label{tab:xcorr}
     \begin{ruledtabular}
     	\begin{tabular}{cccccccc}
@@ -266,13 +249,8 @@ In case of N K and O K (figs.~\ref{fig:combined_maps}b~\&~\ref{fig:combined_maps
     \end{ruledtabular}
 \end{table}
 
-%\subsubsection{\label{sec:level3}Third-level heading: Citations and Footnotes}
-
-%\paragraph{Fourth-level heading is run in.}%
-
 \begin{acknowledgments}
-xyz
-\dots
+We gratefully acknowledge the use of facilities within the LeRoy Eyring Center for Solid State Science at Arizona State University.
 \end{acknowledgments}
 
 %\nocite{*}
