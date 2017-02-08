@@ -60,6 +60,10 @@ rsi,%
 \author{F. Benz}
 \affiliation{Institute of Materials Science, University of Stuttgart, Heisenbergstr. 3, 70569 Stuttgart, Germany}
 
+\author{I. Tischler}
+\author{K. Thonke}
+\affiliation{Institut f\"{u}r Halbleiterphysik, Universit\"{a}t Ulm, D-89069 Ulm, Germany}
+
 \author{T. Aoki}
 \affiliation{LeRoy Eyring Center for Solid State Science, Arizona State University, Tempe, AZ 85287, USA}
 
@@ -72,7 +76,7 @@ Analytical scanning transmission electron microscopy (STEM) has been applied to 
 %Valid PACS numbers may be entered using the \verb+\pacs{#1}+ command.
 \end{abstract}
 
-\pacs{Valid PACS appear here}% PACS, the Physics and Astronomy
+\pacs{29.30.Dn, 42.70.Qs, 61.72.-y, 61.72.Cc, 61.72.J-, 61.72.sh, 61.72.uj, 64.75.Qr, 68.37.Ma, 71.15.-m, 71.55.Eq, 78.60.Hk, 79.20.Uv, 81.05.Ea, 81.15.Cd}% PACS, the Physics and Astronomy
                              % Classification Scheme.
 \keywords{aluminium nitride, terbium, segregation, luminescence, electron microscopy}
 %Use showkeys class option if keyword
@@ -91,23 +95,21 @@ The AlN:Tb films were prepared by reactive direct current (DC) magnetron sputter
 
 \subsection{Cathodoluminescence details}
 \label{sec:CL}
-We have performed CL spectroscopy in order to observe the characteristic Tb\textsuperscript{3+} luminescence. The narrow line-width of the Tb\textsuperscript{3+} emission at 9~K allowed us to examine splitting into a number of sub-levels depending on the coordination symmetry of Tb\textsuperscript{3+} (crystal field splitting). To do so we have used an acceleration voltage of 7~kV and a working distance of 4~mm. (details on SEM type and spectrometer needed!).
+We have performed CL spectroscopy in order to observe the characteristic Tb\textsuperscript{3+} luminescence. The narrow line-width of the Tb\textsuperscript{3+} emission at 9~K allowed us to examine splitting into a number of sub-levels depending on the coordination symmetry of Tb\textsuperscript{3+} (crystal field splitting). To do so we have used an Zeiss LEO DSM 982 SEM \cite{Schirra2007} (acceleration voltage: 7~kV,  working distance: 4~mm) equipped with a helium-cooled cryostat. The emitted light was collected using a glass fibre which was placed on the sample. The light was analysed with a Spex monochromator (1200~l/mm grating, 250~mm blaze wavelength) and a back-illuminated Jobin Yvon CCD.
 
 \subsection{STEM}
 \label{sec:STEM}
 The STEM experiments were carried out using a Nion UltraSTEM 100 equipped with a Nion HERMES monochromator, aberration corrector and Gatan Enfinium ER spectrometer for EELS \cite{Krivanek2013,Krivanek2015}. The microscope was operated at 60kV with 30mrad beam convergence semi-angle. No energy-selecting slit in the dispersive plane of the monochromator was used, providing  ~0.12nm probe size (nominal spot size of 2i), with $\sim$300pA beam current at an energy resolution better than 0.35eV, as given by the characteristics of the cold field emitter electron gun. The collection semi-angle was $>$90mrad for high-angle annular dark field (HAADF) imaging and $<$45mrad with 3mm entrance aperture for EELS. Spectra were acquired with the charge-coupled device (CCD) detector in single read-out, vertical integration mode and a binning factor of 2 for fast acquisition to avoid electron beam-induced damage of the sample. This gave an effective energy dispersion of 0.7eV/channel where the apparent width of the zero loss peak was limited by the detector point spread function rather than the actual energy spread of the electrons. The acquisition parameters of two EELS SI are listed in Table~\ref{tab:Attributes}.
 \begin{table}%[!ht]
-	\caption{EELS data acquisition parameters for the two spectrum images (SI) acquired from the same area.}
+	\caption{EELS data acquisition parameters for the two spectrum images (SI) acquired from the same area at $60$kV.}
     \label{tab:Attributes}
 	\begin{ruledtabular}
 		\begin{tabular}{lll}
 			Attributes&Low loss SI&High loss SI							\\ \hline
-            Acceleration voltage (kV) &$60$&$60$						\\
 			Spatial image size (pixels)&$87\times100$&$87\times100$ 	\\
-            Real-space pixel size (\AA)&$7$&$7$							\\
             Spectrum channels		&$2048$&$512$						\\
 			Dispersion (eV per channel)&$0.7$&$2.8$						\\
-			Nominal field of view (nm) &$70$&$70$						\\
+			Field of view height (nm) &$70$&$70$						\\
 			Conv. semi-angle ($\alpha$)(mrad)&$30$&$30$					\\
 			Coll. semi-angle ($\beta$)(mrad)&$45$&$45$					\\
 			Spectrum offset (eV)&$0$&$310$								\\
@@ -121,8 +123,8 @@ The STEM experiments were carried out using a Nion UltraSTEM 100 equipped with a
 \label{sec:model}
 To further investigate the surroundings of Tb$^{3+}$ ions, we have performed simulations of an AlN supercell (consisting of 18 actual AlN unit cells) using the MOPAC2012 software \cite{steward12} with the extension SPARKLE \cite{freire10} to describe the rare-earth ion. For pure, undoped AlN we found good agreement between the lattice constants of AlN predicted by our simulation (a = 3.12\AA; c = 5.05\AA) and previous reports (a = 3.11\AA; c = 4.98\AA) \cite{ICDD11}. Subsequently, we have replaced an Al$^{3+}$ ion with a Tb$^{3+}$ one, three N$^{3-}$ by O$^{2-}$, and another Al$^{3+}$ by a vacancy to ensure charge neutrality. Initially we distributed these lattice defects within the supercell so that they were spaced far apart and calculated the energy of formation of this 'random' state as our reference energy. We systematically varied the local arrangement, optimised the geometry, and compared the resulting energies of formation. We find that placing the O ions in the nearest neighbouring positions of the Tb ion leads to an energy increase of around 2.5eV per supercell. In contrast, if the Al vacancy V$_\text{Al}$ is placed next to the Tb ion we find that the energy of formation is reduced by -1.38eV. This reduction is likely due to the release of strain energy which is introduced by the larger atomic radius of the Tb$^{3+}$ ion compared to the Al$^{3+}$ one. Gradually coordinating the Al vacancy with more and more O anions leads to a further degrease in energy (-4.98eV). The geometry of this hypothetical lowest energy state is shown in fig.~\ref{fig:felix_model}a. We denote these complexes according to the coordination of the vacancy, for instance the lowest energy one as (V$_\text{Al}$)(O)$_3$(NTb). Fig.~\ref{fig:felix_model}b shows an overview of the energies of different V$_\text{Al}-$N$-$Tb complexes considered. Probably these complexes are formed during the annealing procedure, which is necessary to 'activate' the rare-earth luminescence. From the fully relaxed structure we find a reduction of the local symmetry of the Tb$^{3+}$ lattice site from \textit{T$_\text{d}$} to \textit{C$_\text{3v}$}, corresponding to a slight change in the bond length along one direction of the coordination tetrahedron. To verify this reduction in symmetry we have recorded CL spectra of the $^5$D$_4$ to $^7$F$_5$ transition of the trivalent Tb ions at 9~K (see fig.~\ref{fig:felix_model}c). This transition reveals a seven-fold splitting of the $^7$F$_5$ energy level, which is consistent with the expected number of states in the case of the \textit{C$_\text{3v}$} symmetry (for \textit{T$_\text{d}$} only four states would be expected) \cite{henderson05}.
 \begin{figure}%[!ht]
-	\includegraphics[width=0.3\textwidth]{model}
-    \caption{(a)~Illustration of the lowest energy Tb$^{3+}$ complex. (b)~Comparison of the energies of formation of different Tb-N-V$_\text{Al}$ complexes. The names show the four nearest neighbours of the Al vacancy. (c)~High resolution CL spectrum of the $^5$D$_4$ to $^7$F$_5$ transition of Tb$^{3+}$ ions incorporated in AlN.}
+	\includegraphics[width=0.5\textwidth]{model}
+    \caption{Illustration of the models of the vacancy/Tb$^{3+}$ complex with (a)~no (b)~three oxygen atoms attached to it. (c)~Comparison of the energies of formation of different Tb-N-V$_\text{Al}$ complexes. The names show the four nearest neighbours of the Al vacancy. (d)~High resolution CL spectrum of the $^5$D$_4$ to $^7$F$_5$ transition of Tb$^{3+}$ ions incorporated in AlN.}
     \label{fig:felix_model}
 \end{figure}
 
@@ -149,30 +151,29 @@ All acquired SI have a field of view of $70nm$ and have been rotated through $\s
     	\end{tabular}
     \end{ruledtabular}
 \end{table}
-For calculation of $t/\lambda$, the intensity of the spectra up to the minimum between zero-loss peak and plasmon peak is approximated as the intensity of the zero-loss ($I_0$). Hence $I_0$ contains not only zero-loss intensity, but also phonon losses, some retardation and \v{C}erenkov losses etc. The total intensity ($I_t$) also contains inter-band transitions, plasmon losses and ionization core-losses. Hence the $t/\lambda$ values calculated from eqn.~\ref{eq:tl} will always be slight over-estimates (fig.~\ref{fig:combined_haadf}b). More accurate ways to measure $t/\lambda$ would include fitting the bulk plasmon with a Lorentz function $L(E,E_p,W_p)$ (eqn.~\ref{eq:lorentz}) and the monochromated zero-loss with a Gaussian function $G(E,E_0,W_0)$ (eqn.~\ref{eq:gauss}) and weighting both according to a Poisson distribution $P(n,t/\lambda)$ simultaneously, as shown in eqns.~\ref{eq:poisson} \& \ref{eq:low_loss}.
-\begin{eqnarray}
+For calculation of $t/\lambda$, the intensity of the spectra up to the minimum between zero-loss peak and plasmon peak is approximated as the intensity of the zero-loss ($I_0$). Hence $I_0$ contains not only zero-loss intensity, but also phonon losses, some retardation and \v{C}erenkov losses etc. The total intensity ($I_t$) also contains inter-band transitions, plasmon losses and ionization core-losses. Hence the $t/\lambda$ values calculated from eqn.~\ref{eq:tl} will always be slight over-estimates ($\overline{t/\lambda}=0.32$) (fig.~\ref{fig:combined_haadf}b).
+\begin{align}
 	t/\lambda = \operatorname{ln}\left(\frac{I_t}{I_0}\right)
     \label{eq:tl}
-\end{eqnarray}
-\begin{eqnarray}
+\end{align}
+More accurate ways to measure $t/\lambda$ would include fitting the bulk plasmon with a Lorentz function $L(E,E_p,W_p)$ (eqn.~\ref{eq:lorentz}) and the monochromated zero-loss with a Gaussian function $G(E,E_0,W_0)$ (eqn.~\ref{eq:gauss}) and weighting both according to a Poisson distribution $P(n,t/\lambda)$ simultaneously, as shown in eqns.~\ref{eq:poisson} \& \ref{eq:low_loss}.
+\begin{align}
 	P(n,t/\lambda) = \left(\frac{t}{\lambda}\right)^n\left(\frac{1}{n!}\right)\operatorname{exp}\left(-\frac{t}{\lambda}\right)
     \label{eq:poisson}
-\end{eqnarray}
-\begin{eqnarray}
+\end{align}
+\begin{align}
 	L(E,E_p,W_p) = \frac{A_p}{\pi} \frac{\frac{1}{2}W_p}{(E-E_p)^2+\left(\frac{1}{2}W_p\right)^2}
     \label{eq:lorentz}
-\end{eqnarray}
-\begin{eqnarray}
-	G(E,E_0,W_0) &=& \frac{A_0}{\sqrt{\pi}}\frac{2\sqrt{\operatorname{ln}~2}}{W_0}\nonumber\\
-    & & \times \operatorname{exp}\left(-\left[(E-E_0)\frac{2\sqrt{\operatorname{ln}~2}}{W_0}\right]^2\right)
+\end{align}
+\begin{align}
+	G(E,E_0,W_0) = \frac{0.939A_0}{W_0}\operatorname{exp}\left(-\frac{(E-E_0)^2}{0.36W_0^2}\right)
     \label{eq:gauss}
-\end{eqnarray}
-\begin{eqnarray}
+\end{align}
+\begin{align}
 	S(E,t/\lambda,E_0,W_0,E_p,W_p) = P(0,t/\lambda)~G(E,E_0,W_0) \nonumber \\
-     +\sum_{k=1}^{n}P(k,t/\lambda)~L(E,k\times E_p,W_p) \nonumber \\
-    \label{eq:low_loss}
-\end{eqnarray}
-where $n = \lfloor E_{max}/E_p \rfloor \in \mathbb{N}$ is the integer number of plasmon losses considered. $t/\lambda$, position ($E_0$) and full width at half maximum (FWHM) ($W_0$) of the zero-loss peak, position ($E_p$) and FWHM ($W_p$) of bulk plasmon are the fitting parameters. Eqn.~\ref{eq:tl} can be used as an initial estimate of $t/\lambda$ in multiple linear least-squares (MLLS) fitting of the low loss in eqn.~\ref{eq:low_loss}. This can be extended to the entire SI, which provides more accurate $t/\lambda$ values. Figs.~\ref{fig:combined_haadf}c and \ref{fig:combined_haadf}d are maps of $E_p$ and $W_p$ obtained from eqn.~\ref{eq:lorentz} where the values of the plasmon peak energy have been interpolated to sub-pixel precision ($\approx$0.1eV). The FWHM  ($W_p$) of bulk plasmons (fig.~\ref{fig:combined_haadf}d) of oxides are known to be wider than those of compound semi-conductors. Elemental maps are shown in Fig.~\ref{fig:combined_maps}a-\ref{fig:combined_maps}e. The background fitting details are listed in Table~\ref{tab:back_fit_table} along with the integration ranges ($\Delta$). The functions used to fit the background are exponential decay (eqn.~\ref{eq:exp_fun}) or inverse power-law functions (eqn.~\ref{eq:pow_law}).
+     +\sum_{k=1}^{n}P(k,t/\lambda)~L(E,k\times E_p,W_p)    \label{eq:low_loss}
+\end{align}
+where $n = \lfloor E_{max}/E_p \rfloor \in \mathbb{N}$ is the integer number of plasmon losses considered. $t/\lambda$, position ($E_0$) and full width at half maximum (FWHM) ($W_0$) of the zero-loss peak, position ($E_p$) and FWHM ($W_p$) of bulk plasmon are the fitting parameters. Eqn.~\ref{eq:tl} can be used as an initial estimate of $t/\lambda$ in multiple linear least-squares (MLLS) fitting of the low loss in eqn.~\ref{eq:low_loss}. This can be extended to the entire SI, which provides more accurate $t/\lambda$ values ($\overline{t/\lambda}=0.31,~\overline{\mathbb{R}^2}=0.992$). Figs.~\ref{fig:combined_haadf}c and \ref{fig:combined_haadf}d are maps of $E_p$ and $W_p$ obtained from eqn.~\ref{eq:lorentz} where the values of the plasmon peak energy have been interpolated to sub-pixel precision ($\approx$0.1eV). The FWHM  ($W_p$) of bulk plasmons (fig.~\ref{fig:combined_haadf}d) of oxides are known to be wider than those of compound semi-conductors. Elemental maps are shown in Fig.~\ref{fig:combined_maps}a-\ref{fig:combined_maps}e. The background fitting details are listed in Table~\ref{tab:back_fit_table} along with the integration ranges ($\Delta$). The functions used to fit the background are exponential decay (eqn.~\ref{eq:exp_fun}) or inverse power-law functions (eqn.~\ref{eq:pow_law}).
 \begin{eqnarray}
 	f(E) =
     \sum^{j=k}_{j=1}
@@ -234,8 +235,8 @@ The value of $k = 1$ for fit type "$Exp1$", but $k = 2$ for fit types "$Exp2$" a
 \section{Discussion} %(Anti) correlation of elemental maps
 \label{sec:discussion}
 In case of N K and O K (figs.~\ref{fig:combined_maps}b~\&~\ref{fig:combined_maps}c), the contrast of the maps indicates anti-correlation, i.e. in the AlN region, O is replacing N (group V sub-lattice). Tb must be replacing Al in the group III sub-lattice, although the corresponding decrease in local Al contrast is too small to become clearly visible in fig.~\ref{fig:combined_maps}a. Table~\ref{tab:xcorr} lists the cross-correlation values between the elemental maps in the top half of AlN marked in fig.~\ref{fig:combined_maps}f. The cross correlation of N and Tb map is negative. Similar observations can be made between N and O. The cross-correlation between Tb and O maps is positive, indicating the formation of Tb-O complexes. Hence this supports the atomic structure model in fig.~\ref{fig:felix_model}a.
-\begin{table}%[!ht]
-	\caption{Cross-correlation between elemental maps in $AlN$ region marked by box in fig.~\ref{fig:combined_maps}f.}
+\begin{table}[h]
+	\caption{Cross-correlation between elemental maps in $AlN$ region marked by box in fig.~\ref{fig:combined_maps}f}
     \label{tab:xcorr}
     \begin{ruledtabular}
     	\begin{tabular}{cccccccc}
@@ -250,7 +251,7 @@ In case of N K and O K (figs.~\ref{fig:combined_maps}b~\&~\ref{fig:combined_maps
 \end{table}
 
 \begin{acknowledgments}
-We gratefully acknowledge the use of facilities within the LeRoy Eyring Center for Solid State Science at Arizona State University.
+We gratefully acknowledge the use of facilities within the LeRoy Eyring Center for Solid State Science at Arizona State University. FB acknowledges the longstanding guidance and help of Prof. Dr. H. P. Strunk who passed away on 17$^\text{th}$ of August 2015.
 \end{acknowledgments}
 
 %\nocite{*}
